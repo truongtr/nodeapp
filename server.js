@@ -1,22 +1,32 @@
-// var http  = require('http');
+//This is a HTTP module to get HTML
+// var http = require('http');
 
 // http.createServer(function(req,res){
-// 	res.writeHead (200,{'content-type':'text/plain'});
-// 	res.end('hello!');
+// 	res.writeHead(200,{'Content-type:':'text/plain'});
+// 	res.end('Hello');
 // }).listen(1338,'127.0.0.1');
+// console.log("Webserver has started");
+
+//var http = require('http');
+//var fs = require('http');
+// http.createServer(function(req,res){
+// 	fs.readFile('index.html', function(err,data){
+// 		res.writeHead (200,{'content-type':'text/html'});
+// 		res.end(data);
+// 	});
+	
+// }).listen(1339,'127.0.0.1');
 
 // console.log('webserver has started');
 
-var http  = require('http');
-var fs  = require('fs');
 
 
+var http = require('http');
+var fs = require('fs');
 http.createServer(function(req,res){
 	fs.readFile('index.html', function(err,data){
-		res.writeHead (200,{'content-type':'text/html'});
+		res.writeHead(200,{'Content-type:':'text/html'});
 		res.end(data);
-	});
-	
+	});	
 }).listen(1338,'127.0.0.1');
-
-console.log('webserver has started');
+console.log("Webserver has started");
